@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 1학기 학습법 특강</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700&display=swap');
+        
+        body {
+            font-family: 'Pretendard', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* 배경 그라데이션 */
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .modal-active {
+            display: flex !important;
+        }
+
+        .speaker-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #e2e8f0;
+        }
+
+        /* 캐릭터 부유 애니메이션 */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Hero Section (캐릭터 추가 버전) -->
+    <header class="gradient-bg text-white py-12 md:py-20 px-4 overflow-hidden">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
+            <!-- 좌측: 텍스트 콘텐츠 -->
+            <div class="flex-1 text-center md:text-left z-10">
+                <span class="inline-block px-4 py-1 bg-white/20 rounded-full text-sm font-semibold mb-4">2026 Academic Year</span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                    1학기 학습법<br>특강 가이드
+                </h1>
+                <p class="text-lg md:text-xl opacity-90 mb-8">당신의 잠재력을 깨우는 최고의 학습 전략,<br class="hidden md:block">지금 바로 확인하세요.</p>
+                <div class="flex justify-center md:justify-start gap-3">
+                    <a href="#schedule" class="px-6 py-3 bg-white text-indigo-600 font-bold rounded-xl shadow-lg hover:bg-opacity-90 transition-all">일정 확인하기</a>
+                </div>
+            </div>
+
+            <!-- 우측: 캐릭터 이미지 영역 -->
+            <div class="flex-shrink-0 w-64 md:w-80 lg:w-96 relative">
+                <!-- [캐릭터 이미지 수정] src 부분에 캐릭터 이미지 URL을 넣으세요 -->
+                <img src="https://cdn-icons-png.flaticon.com/512/4344/4344843.png" 
+                     alt="Study Character" 
+                     class="w-full h-auto animate-float drop-shadow-[0_20px_20px_rgba(0,0,0,0.3)]">
+                
+                <!-- 캐릭터 뒤의 꾸밈 요소 (빛 효과) -->
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-white/20 blur-[80px] rounded-full -z-10"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Schedule Section -->
+    <main id="schedule" class="max-w-5xl mx-auto px-4 py-16">
+        <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
+            <h2 class="text-2xl font-bold flex items-center gap-2">
+                <i class="fa-solid fa-calendar-check text-indigo-600"></i>
+                특강 일정 안내
+            </h2>
+            <p class="text-slate-500 text-sm">※ 각 차시를 클릭하면 상세 내용을 볼 수 있습니다.</p>
+        </div>
+
+        <!-- Schedule Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            <button onclick="showDetails(1)" class="glass-card p-6 rounded-2xl text-left">
+                <div class="text-indigo-600 font-bold mb-2">01차시</div>
+                <h3 class="text-xl font-bold mb-4 leading-tight">자기주도 학습의 시작: 목표 설정법</h3>
+                <div class="flex items-center text-sm text-slate-500">
+                    <i class="fa-regular fa-clock mr-2"></i> 2026. 03. 12(목) 14:00
+                </div>
+            </button>
+
+            <button onclick="showDetails(2)" class="glass-card p-6 rounded-2xl text-left">
+                <div class="text-indigo-600 font-bold mb-2">02차시</div>
+                <h3 class="text-xl font-bold mb-4 leading-tight">집중력을 높이는 시간 관리 전략</h3>
+                <div class="flex items-center text-sm text-slate-500">
+                    <i class="fa-regular fa-clock mr-2"></i> 2026. 03. 26(목) 14:00
+                </div>
+            </button>
+
+            <button onclick="showDetails(3)" class="glass-card p-6 rounded-2xl text-left">
+                <div class="text-indigo-600 font-bold mb-2">03차시</div>
+                <h3 class="text-xl font-bold mb-4 leading-tight">핵심을 꿰뚫는 노트 필기 기술</h3>
+                <div class="flex items-center text-sm text-slate-500">
+                    <i class="fa-regular fa-clock mr-2"></i> 2026. 04. 09(목) 14:00
+                </div>
+            </button>
+
+            <button onclick="showDetails(4)" class="glass-card p-6 rounded-2xl text-left">
+                <div class="text-indigo-600 font-bold mb-2">04차시</div>
+                <h3 class="text-xl font-bold mb-4 leading-tight">A+를 부르는 시험 대비 전략</h3>
+                <div class="flex items-center text-sm text-slate-500">
+                    <i class="fa-regular fa-clock mr-2"></i> 2026. 04. 30(목) 14:00
+                </div>
+            </button>
+
+            <button onclick="showDetails(5)" class="glass-card p-6 rounded-2xl text-left">
+                <div class="text-indigo-600 font-bold mb-2">05차시</div>
+                <h3 class="text-xl font-bold mb-4 leading-tight">디지털 도구를 활용한 협업 학습</h3>
+                <div class="flex items-center text-sm text-slate-500">
+                    <i class="fa-regular fa-clock mr-2"></i> 2026. 05. 14(목) 14:00
+                </div>
+            </button>
+        </div>
+
+        <!-- Application Section -->
+        <section class="bg-indigo-50 rounded-3xl p-8 border border-indigo-100">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="flex-1 text-center md:text-left">
+                    <h2 class="text-2xl font-bold mb-4">참여 신청을 원하시나요?</h2>
+                    <p class="text-slate-600 mb-6">각 특강은 선착순으로 모집되며, 참여 시 마일리지 혜택을 드립니다.</p>
+                    <button onclick="toggleApplication()" class="inline-flex items-center px-6 py-3 bg-indigo-600 text-white font-bold rounded-xl hover:bg-indigo-700 transition-colors shadow-lg">
+                        참여 신청 방법 보기
+                        <i class="fa-solid fa-chevron-down ml-2" id="arrowIcon"></i>
+                    </button>
+                </div>
+                <div class="hidden md:block w-48 opacity-20">
+                    <i class="fa-solid fa-paper-plane text-8xl text-indigo-600"></i>
+                </div>
+            </div>
+
+            <div id="applyMethod" class="hidden mt-8 pt-8 border-t border-indigo-200 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="flex flex-col items-center text-center p-4">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-indigo-600 font-bold mb-4 shadow-sm">1</div>
+                    <h4 class="font-bold mb-2">종합정보시스템 접속</h4>
+                    <p class="text-sm text-slate-500">포털 사이트 로그인 후 '학습지원' 메뉴 클릭</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-4">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-indigo-600 font-bold mb-4 shadow-sm">2</div>
+                    <h4 class="font-bold mb-2">원하는 특강 선택</h4>
+                    <p class="text-sm text-slate-500">일정 확인 후 수강 희망 차시를 개별 신청</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-4">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-indigo-600 font-bold mb-4 shadow-sm">3</div>
+                    <h4 class="font-bold mb-2">신청 완료 확인</h4>
+                    <p class="text-sm text-slate-500">SMS로 전송된 참여 링크 및 장소 확인</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Detail Modal -->
+    <div id="detailModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-8 relative animate-in fade-in zoom-in duration-300 shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600">
+                <i class="fa-solid fa-xmark text-2xl"></i>
+            </button>
+            <div id="modalContent"></div>
+            <button onclick="closeModal()" class="w-full mt-8 py-3 bg-slate-100 text-slate-600 font-bold rounded-xl hover:bg-slate-200 transition-colors">닫기</button>
+        </div>
+    </div>
+
+    <footer class="text-center py-12 text-slate-400 text-sm">
+        <p>© 2026 교수학습개발센터. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const sessionData = {
+            1: {
+                title: "자기주도 학습의 시작: 목표 설정법",
+                speaker: "김학습 교수",
+                img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop",
+                desc: "단순한 결심을 넘어 구체적이고 실현 가능한 SMART 목표 설정법을 배웁니다. 학기 초 슬럼프를 방지하는 동기부여 세션입니다.",
+                curriculum: ["성공적인 대학생활의 정의", "SMART 목표 수립 워크숍", "우선순위 결정 매트릭스 활용"]
+            },
+            2: {
+                title: "집중력을 높이는 시간 관리 전략",
+                speaker: "박집중 전문가",
+                img: "",
+                desc: "흩어지는 집중력을 모으는 구체적인 테크닉(뽀모도로, 딥워크 등)을 실습하고 자신만의 주간 시간표를 완성해 봅니다.",
+                curriculum: ["나의 시간 도둑 찾기", "집중 환경 조성법", "플래너 활용 실습"]
+            },
+            3: {
+                title: "핵심을 꿰뚫는 노트 필기 기술",
+                speaker: "이정리 강사",
+                img: "",
+                desc: "코넬 노트, 마인드맵 등 다양한 필기법의 장단점을 이해하고 과목 특성에 맞는 최적의 필기 스타일을 찾습니다.",
+                curriculum: ["효과적인 필기 도구 선택", "강의 핵심 키워드 선별법", "디지털 노트(Notion, iPad) 활용법"]
+            },
+            4: {
+                title: "A+를 부르는 시험 대비 전략",
+                speaker: "최성적 교수",
+                img: "",
+                desc: "중간/기말고사를 대비하여 단기 기억을 장기 기억으로 전환하는 인출 연습법과 메타인지 전략을 다룹니다.",
+                curriculum: ["시험 불안 조절 기술", "망각곡선을 이용한 복습법", "기출문제 분석 및 응용 전략"]
+            },
+            5: {
+                title: "디지털 도구를 활용한 협업 학습",
+                speaker: "정기술 강사",
+                img: "",
+                desc: "팀 프로젝트와 스터디 그룹에서 시너지를 낼 수 있는 최신 협업 툴 활용법을 익혀 학습 효율을 극대화합니다.",
+                curriculum: ["Slack, Trello를 활용한 프로젝트 관리", "효율적인 팀 미팅 운영법", "지식 공유 아카이빙 전략"]
+            }
+        };
+
+        function showDetails(id) {
+            const data = sessionData[id];
+            const imgHtml = data.img 
+                ? `<img src="${data.img}" alt="${data.speaker}" class="speaker-img mb-4 shadow-md border-2 border-white mx-auto">`
+                : `<div class="speaker-img mb-4 flex items-center justify-center bg-indigo-100 text-indigo-400 text-3xl shadow-inner border-2 border-white mx-auto">
+                     <i class="fa-solid fa-user"></i>
+                   </div>`;
+
+            const content = `
+                <div class="flex flex-col items-center text-center mb-6">
+                    ${imgHtml}
+                    <div class="text-indigo-600 font-bold mb-1">${id}차시 상세정보</div>
+                    <h3 class="text-2xl font-bold leading-tight">${data.title}</h3>
+                    <div class="mt-2 text-slate-500 font-medium">강사: ${data.speaker}</div>
+                </div>
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">강의 소개</h4>
+                        <p class="text-slate-600 leading-relaxed">${data.desc}</p>
+                    </div>
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                        <h4 class="font-bold mb-3 flex items-center gap-2 text-indigo-600">
+                            <i class="fa-solid fa-list-check"></i>
+                            주요 학습 내용
+                        </h4>
+                        <ul class="text-sm text-slate-600 space-y-2.5">
+                            ${data.curriculum.map(item => `<li class="flex items-start gap-2"><span class="text-indigo-300 mt-1">●</span><span>${item}</span></li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `;
+            document.getElementById('modalContent').innerHTML = content;
+            document.getElementById('detailModal').classList.add('modal-active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('detailModal').classList.remove('modal-active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function toggleApplication() {
+            const methodDiv = document.getElementById('applyMethod');
+            const arrow = document.getElementById('arrowIcon');
+            if (methodDiv.classList.contains('hidden')) {
+                methodDiv.classList.remove('hidden');
+                arrow.style.transform = 'rotate(180deg)';
+                setTimeout(() => { methodDiv.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 100);
+            } else {
+                methodDiv.classList.add('hidden');
+                arrow.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('detailModal');
+            if (event.target == modal) closeModal();
+        }
+    </script>
+</body>
+</html>
