@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2026 1학기 학습법 특강</title>
-    <script src="https://github.com/smu-education/2026-study-lecture/blob/main/%EB%B9%84%ED%96%89.png?raw=true"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700&display=swap');
@@ -93,8 +93,8 @@
             </div>
 
             <div class="flex-shrink-0 w-72 md:w-[450px] relative">
-                <!-- 변경된 계정 이름(smu-education) 적용 -->
-                <img src="https://github.com/smu-education/2026-study-lecture/blob/main/%EB%B9%84%ED%96%89.png?raw=true" 
+                <!-- 가장 안전한 방법: 파일 이름만 적기 (상대 경로 적용) -->
+                <img src="비행.png" 
                      id="mainCharacter"
                      alt="Main Character" 
                      class="w-full h-auto animate-float drop-shadow-[0_25px_25px_rgba(0,0,0,0.4)] relative z-10">
@@ -180,7 +180,7 @@
                 <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center font-bold text-lg mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">04</div>
                 <h3 class="text-xl font-bold mb-6 group-hover:text-blue-600 transition-colors leading-tight flex-grow text-slate-800">
                     AI를 활용한 공동체 학습<br>
-                    <span class="text-lg text-slate-600 font-semibold mt-2 block">: AI와 함께 A+! (예정)</span>
+                    AI와 함께 A+! (예정)
                 </h3>
                 <div class="space-y-2.5 pt-4 border-t border-slate-100">
                     <div class="flex items-center text-sm text-slate-500 font-medium">
@@ -200,7 +200,7 @@
                 <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center font-bold text-lg mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">05</div>
                 <h3 class="text-xl font-bold mb-6 group-hover:text-blue-600 transition-colors leading-tight flex-grow text-slate-800">
                     진짜 공부는 지금부터!<br>
-                    <span class="text-lg text-slate-600 font-semibold mt-2 block">: 학기 말 학습성찰 (예정)</span>
+                    학기 말 학습성찰 (예정)
                 </h3>
                 <div class="space-y-2.5 pt-4 border-t border-slate-100">
                     <div class="flex items-center text-sm text-slate-500 font-medium">
@@ -282,9 +282,12 @@
                 location: "학술관 102호",
                 time: "03월 25일(수) 16:30",
                 online: "03월 30일(월) ~ 04월 12일(일)<br>교내 LMS (강의지원시스템)",
-                img: "https://github.com/smu-education/2026-study-lecture/blob/main/%EA%B3%B5%EB%B6%80.png?raw=true",
+                /* 짧은 파일명으로 변경 */
+                img: "공부.png",
                 desc: "학기 초 없어져버린 내 학습동기 찾아가기! 집중력을 통해 학습동기 끌어 올려~~~",
-                points: ["학습준비", "학습 동기", "집중력 높이기"]
+                points: ["학습준비", "학습 동기", "집중력 높이기"],
+                /* [신청 링크 추가] 아래 큰따옴표 안에 실제 1차 특강 신청 링크를 넣으세요 */
+                applyLink: "여기에_1차_신청_링크_붙여넣기"
             },
             2: {
                 title: "AI를 활용한 학습 방법 (예정)",
@@ -292,7 +295,8 @@
                 location: "학술관 102호",
                 time: "04월 09일(목) 16:30",
                 online: "04월 13일(월) ~ 04월 26일(일)<br>교내 LMS (강의지원시스템)",
-                img: "https://github.com/smu-education/2026-study-lecture/blob/main/%EC%9C%BC%EC%93%B1.png?raw=true",
+                /* 짧은 파일명으로 변경 */
+                img: "으쓱.png",
                 desc: "나... 요즘 자꾸 AI가 궁금해져! 같이 공부한번 해볼까?",
                 points: ["학습전략", "AI활용 학습"]
             },
@@ -302,28 +306,30 @@
                 location: "학술관 102호",
                 time: "04월 28일(화) 16:30",
                 online: "05월 04일(월) ~ 05월 17일(일)<br>교내 LMS (강의지원시스템)",
-                img: "https://github.com/smu-education/2026-study-lecture/blob/main/%EC%9D%B8%EC%82%AC.png?raw=true",
+                /* 짧은 파일명으로 변경 */
+                img: "인사.png",
                 desc: "발표가 어려운 나, 요즘 AI가 대세라던데.. 나 좀 도와줘! AI!! ",
                 points: ["발표", "AI를 이용한 자신있는 발표", "AI 활용 발표 꿀팁!"]
             },
             4: {
-                title: "AI를 활용한 공동체 학습<br>: AI와 함께 A+! (예정)",
+                title: "AI를 활용한 공동체 학습<br>AI와 함께 A+! (예정)",
                 speaker: "학생강사 2인",
                 location: "학술관 102호",
                 time: "05월 19일(화) 16:30",
                 online: "05월 26일(화) ~ 06월 08일(월)<br>교내 LMS (강의지원시스템)",
-                img: "https://github.com/smu-education/2026-study-lecture/blob/main/%EC%9E%90%EB%A3%8C%20%EC%84%A4%EB%AA%85.png?raw=true",
+                /* 짧은 파일명으로 변경 */
+                img: "자료 설명.png",
                 desc: "친구들이 전해주는 AI를 활용해 학습하기! 공동체 학습도 혼자 공부하기도 완전 타파!",
                 points: ["FUN러닝프렌즈", "AI와 함께 공부하기", "AI가 도와주는 나만의 공부!"]
             },
             5: {
-                title: "진짜 공부는 지금부터!<br>: 학기 말 학습성찰 (예정)",
+                title: "진짜 공부는 지금부터!<br>학기 말 학습성찰 (예정)",
                 speaker: "외부 전문가 초청 예정",
                 location: "학술관 102호",
                 time: "05월 27일(수) 16:30",
                 online: "06월 01일(월) ~ 06월 21일(일)<br>교내 LMS (강의지원시스템)",
-                /* 변경된 계정 이름(smu-education) 적용 */
-                img: "https://github.com/smu-education/2026-study-lecture/blob/main/%EC%9D%B8%EC%9E%AC%EC%96%91%EC%84%B1.png?raw=true",
+                /* 짧은 파일명으로 변경 */
+                img: "인재양성.png",
                 desc: "한 학기의 끝자락,, 나 뭐했지? 그래도 이제부터가 진짜다! 마지막 스퍼트 Let's Go!",
                 points: ["학습성찰", "학기말 공부"]
             }
@@ -382,6 +388,12 @@
                         </ul>
                     </div>
                 </div>
+                
+                ${data.applyLink ? `
+                <a href="${data.applyLink}" target="_blank" class="mt-8 flex items-center justify-center w-full py-4 bg-slate-800 text-white font-bold rounded-2xl hover:bg-slate-900 transition-colors shadow-xl">
+                    <i class="fa-solid fa-arrow-up-right-from-square mr-2"></i> 특강 신청 바로가기
+                </a>
+                ` : ''}
             `;
             document.getElementById('modalContent').innerHTML = content;
             document.getElementById('detailModal').classList.add('modal-active');
@@ -412,6 +424,7 @@
     </script>
 </body>
 </html>
+
 
 
 
