@@ -239,7 +239,7 @@
                 <div id="applyMethod" class="hidden flex-1 grid grid-cols-1 gap-6">
                     <!-- 구글 폼 신청 버튼 (링크 수정 필요) -->
                     <a href="여기에_구글폼_링크_붙여넣기" target="_blank" class="bg-blue-600 hover:bg-blue-500 p-6 rounded-2xl border border-blue-400 backdrop-blur-sm transition-all flex flex-col items-center justify-center text-center group shadow-xl">
-                        <span class="text-blue-200 font-bold mb-2 block text-sm bg-blue-800/50 px-3 py-1 rounded-full">현재 접수 중</span>
+                        <span class="text-blue-200 font-bold mb-2 block text-sm bg-blue-800/50 px-3 py-1 rounded-full">선착순 접수 마감</span>
                         <p class="font-bold text-2xl mb-1 flex items-center gap-2">
                             1차 특강 신청 바로가기 
                             <i class="fa-solid fa-arrow-up-right-from-square transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"></i>
@@ -271,12 +271,21 @@
     </div>
 
     <!-- 하단 푸터 -->
-    <footer class="text-center py-20 text-slate-400 border-t border-slate-100">
+       <footer class="text-center py-20 text-slate-400 border-t border-slate-100">
+        <!-- SNS 아이콘 영역 -->
         <div class="flex justify-center gap-6 mb-6 text-xl">
             <a href="https://www.instagram.com/semyung_ctl?igsh=MTZiNjYwcHdicXF5dg==" target="_blank" class="hover:text-blue-500 transition-colors"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://www.youtube.com/@semyung_univ" target="_blank" class="hover:text-blue-500 transition-colors"><i class="fa-brands fa-youtube"></i></a>
             <a href="https://www.semyung.ac.kr/pro_center.do" target="_blank" class="hover:text-blue-500 transition-colors"><i class="fa-solid fa-globe"></i></a>
         </div>
+        
+        <!-- 방문자 수 배지 영역 (복구 완료!) -->
+        <div class="flex justify-center mb-6 hover:opacity-80 transition-opacity">
+            <a href="https://myhits.vercel.app" target="_blank">
+                <img src="https://myhits.vercel.app/api/hit/https%3A%2F%2Fsmu-education.github.io%2F2026-study-lecture%2F?color=green&label=%E2%AD%90&size=small&base_count=1000" alt="방문자 수 확인" />
+            </a>
+        </div>
+
         <p class="text-sm">© 2026 교수학습개발센터. All rights reserved.</p>
     </footer>
 
